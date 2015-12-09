@@ -28,21 +28,17 @@ library(parallel)
   
   # Eliminar repetidos
   listaIPSFinal <- unique(listaIPS)
-  
-  # password <- c("t1l2cm3r", "09ChAU10", "BR14mb10", "emartinez")
-  
   ptm <- proc.time()
   # Calculate the number of cores
   no_cores <- detectCores() - 2
   # Initiate cluster
   cl <- makeCluster(no_cores)
-  
-  parLapply(cl, listaIPSFinal, function(ip) {
-    invisible({
-      system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=t1l2cm3r --port=22', ip))
-      system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=09ChAU10 --port=22', ip))
-      system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=BR14mb10 --port=22', ip))
-      system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=emartinez --port=22', ip))
+  invisible({
+    parLapply(cl, listaIPSFinal, function(ip) {
+        system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=X1 --port=22', ip))
+        system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=X2 --port=22', ip))
+        system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=X3 --port=22', ip))
+        system(sprintf('/usr/share/crmpoint/bin/python /usr/share/crmpoint/key/manage.pyo adopt --hostname=%s --username=admin --password=X4 --port=22', ip))
     })
   })
   stopCluster(cl)
