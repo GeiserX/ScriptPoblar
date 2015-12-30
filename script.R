@@ -1,13 +1,13 @@
 setwd("/home/tecnico/ScriptPoblar")
 library("stringr")
-library(parallel)
+library(parallel) # install.packages() isn't needed
 
-  dispositivos <- read.csv("disp.csv")
+  dispositivos <- read.csv("Dispositivos.csv")
   
   splitted <- str_split(dispositivos$Direcciones, "\\.")
   finales <- vector("character")
   for(i in 1:length(splitted)){
-    if (splitted[[i]][1] == "10") ## 
+    if (splitted[[i]][1] == "10") 
       finales[i] <- as.character(dispositivos$Direcciones[i])
   }
   finales <- finales[complete.cases(finales)]
@@ -30,7 +30,7 @@ library(parallel)
   listaIPSFinal <- unique(listaIPS)
   ptm <- proc.time()
   # Calculate the number of cores
-  no_cores <- detectCores() - 2
+  no_cores <- detectCores() - 4
   # Initiate cluster
   cl <- makeCluster(no_cores)
   invisible({
