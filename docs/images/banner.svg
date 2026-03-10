@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00796B"/>
+      <stop offset="100%" style="stop-color:#1A1A2E"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="200" rx="12" fill="url(#bg)"/>
+  <rect width="900" height="200" rx="12" fill="url(#grid)"/>
+  <!-- Terminal / script icon -->
+  <g transform="translate(80, 100)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Terminal window -->
+    <rect x="-35" y="-30" width="70" height="55" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <!-- Title bar -->
+    <line x1="-35" y1="-20" x2="35" y2="-20"/>
+    <!-- Title bar dots -->
+    <circle cx="-27" cy="-25" r="2.5" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="-19" cy="-25" r="2.5" fill="rgba(255,255,255,0.4)"/>
+    <circle cx="-11" cy="-25" r="2.5" fill="rgba(255,255,255,0.4)"/>
+    <!-- Prompt chevron -->
+    <polyline points="-22,-8 -12,2 -22,12"/>
+    <!-- Cursor line -->
+    <line x1="-6" y1="12" x2="15" y2="12"/>
+    <!-- Parallel lines hint -->
+    <g transform="translate(42, -10)" opacity="0.6">
+      <line x1="0" y1="0" x2="0" y2="20"/>
+      <line x1="6" y1="-5" x2="6" y2="25"/>
+      <line x1="12" y1="0" x2="12" y2="20"/>
+    </g>
+  </g>
+  <!-- Title -->
+  <text x="450" y="90" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="1">ScriptPoblar</text>
+  <!-- Subtitle -->
+  <text x="450" y="130" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.8)" text-anchor="middle">Parallel CRM Control device provisioning</text>
+</svg>
