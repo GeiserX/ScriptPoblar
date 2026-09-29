@@ -22,7 +22,7 @@ You need R with `stringr`, the CRM Control install at `/usr/share/crmpoint`, and
 Rscript script.R
 ```
 
-It expands every 10.x.x.x/24 range and runs `manage.pyo adopt` in parallel on all cores but four.
+It expands every 10.x.x.x/24 range and runs `manage.pyo adopt` in parallel on all cores but four, so the host needs at least five cores. The script passes the CSV values to the shell unchecked: use a `Dispositivos.csv` you wrote yourself.
 
 ## Related projects
 
