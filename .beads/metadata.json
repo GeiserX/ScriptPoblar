@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "ScriptPoblar",
+  "project_id": "0ac0cfbe-4833-4692-a466-7a139c14cdae"
+}
